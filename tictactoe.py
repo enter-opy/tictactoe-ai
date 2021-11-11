@@ -113,7 +113,7 @@ def maxvalue(state):
     
     v = -inf
     
-    # for every possible action in the given state pass the result of the action on the state to the minvalue function
+    # for every possible action in the given state pass the result of each action on the state to the minvalue function
     for action in actions(state):
         min_value, t = minvalue(result(state, action, X))
         if min_value > v:
@@ -128,7 +128,7 @@ def minvalue(state):
     
     v = inf
     
-    # for every possible action in the given state pass the result of the action on the state to thes maxvalue function
+    # for every possible action in the given state pass the result of each action on the state to thes maxvalue function
     for action in actions(state):
         max_value, t = maxvalue(result(state, action, O))
         if max_value < v:
